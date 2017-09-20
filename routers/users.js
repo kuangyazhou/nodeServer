@@ -17,6 +17,10 @@ router.get('/t',function(req,res){
 
 router.get('/m',function(req,res){
     res.json({a:1,b:[true,'ok']});
+});
+
+router.get('/data',function(req,res){
+    res.send({name:'hello',value:'world'});
 })
 
 module.exports=router;

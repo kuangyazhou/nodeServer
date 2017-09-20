@@ -15,7 +15,15 @@ app.use(express.static(__dirname+'/public'));
 
 app.use('/user',require('./routers/users.js'));
 
-app.listen(8888);
+// app.listen(8888,function(req,res){
+//     console.log(req,res);
+// });
+
+let server=app.listen(8888,function(){
+    let host=server.address().address;
+    let port=server.address().port;
+    console.log('nodeServer listening at http://',host,port)
+})
 
 // let server=app.listen(8888,function(){
 //     let host=server.address().address;
