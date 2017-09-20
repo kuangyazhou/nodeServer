@@ -1,0 +1,8 @@
+{
+    "name": "nodeServer",
+    "main": "./app.js",
+    "dependencies": {
+        "express": "*",
+        "body-parser": "*"
+    }
+}
