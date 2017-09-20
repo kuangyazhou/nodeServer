@@ -1,6 +1,10 @@
 var express=require('express');
 var router=express.Router();
 
+router.get('/',function(req,res){
+    res.sendFile('/text.html',{root:__dirname+'./../public'})
+});
+
 router.all('/list',function(req,res){
     console.log(req.method,+"/br"+req.baseUrl,+"/br"+req.path);
     res.send('hello');
